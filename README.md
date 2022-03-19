@@ -1,4 +1,4 @@
-# About Home Assistant
+# Home Assistant Info
 
 ## Introduction
 
@@ -16,10 +16,11 @@ Check out Paulus's blog post [Perfect Home Automation](https://www.home-assistan
 
 
 
+
 ## Free & Open-Source Software
 
 The virtually the entire internet runs on open-source software.
-- web servers use Linux
+- web servers use Linux (98%~)
 - web browsers
 - front-end (javascript, css, web frameworks)
 
@@ -39,60 +40,90 @@ There's a great security upside to open-source in that anyone can audit the code
 
   The Home Assistant server itself can run within a LAN (home network) on [hardware](#hardware) completely disconnected from the internet. 
 
-  Home Assistant is cloud agnostic you can still integrate common cloud services such as Amazon or Google. You can use Alexa or Google Home with HomeAssistant as a 'middleman' between your devices. With [Nabu Casa Cloud](#nabu-casa) you can access your Home Assistant instance from anywhere with an internet connection. The value is that users have the right to choose to use cloud services based on their level of trust.
+  Home Assistant is cloud agnostic you can still integrate common cloud services such as Amazon or Google. You can use Alexa or Google Home with HomeAssistant as a 'middleman' between your devices. With [Nabu Casa Cloud](#nabu-casa-inc) you can access your Home Assistant instance from anywhere with an internet connection. The value is that users have the right to choose to use cloud services based on their level of trust.
 
-  <img src="cloud-meme.webp" alt="Home Assistant Yellow" style="width:50%;"/>
+  <img src="cloud-meme.webp" alt="Home Assistant Yellow" style="width:25%;"/>
 
 ## User Interface
 
-  Lovelace Dashboard is Home Assistant's official user interface. It is highly customizable with a large selection of themes and 'cards' for displaying data an interacting with [integrations](#integrations). Lovelace is designed for both simple and advanced users, allowing users to build scripts and automations in a low-code/no-code environment. 
+  Lovelace Dashboard is Home Assistant's official user interface. It is highly customizable with a large selection of themes and 'cards' for displaying data an interacting with [integrations](#integrations). Lovelace is designed for both simple and advanced users, allowing users to build scripts and automations in a low-code/no-code environment.
 
-  *[DEMO](https://demo.home-assistant.io)*
+  The dashboard is accessible by:
+  - Web Browser
+  - Mobile App (iOS/Android)
+  - Desktop App (MacOS)
+
+  *[LOVELACE DEMO](https://demo.home-assistant.io)*
 
   There are also alternative dashboards made available through the community for different use cases.
-
-  ![ha-tablet](/ha-tablet.jpg)
-  *Source: [Everything Smart Home](https://youtu.be/_FktMQSD5LE)*
   
+<img src="ha-tablet.jpg" alt="Home Assistant tablet" style="width:50%;"/>
+
+*Image Source: [Everything Smart Home](https://youtu.be/_FktMQSD5LE)*
 
 ## Integrations
 
+Integrations are how Home Assistant interfaces with devices and services. With over **1.5k** officially supported integrations there's a lot to choose from.
+
+Devices:
+- thermostat, climate sensors
+- smart lights (hue)
+- security cameras
+- door sensors
+- electrical usage / solar
+- presence sensors
+- media (eg. audio, tv, gaming console)
+- smart car
+
+Services:
+- weather
+- voice assistant
+- spotify
+
+[full list of supported integrations](https://www.home-assistant.io/integrations/)
+
+## State & Automations
+
+Home Assistant includes a state machine and automation engine.
+
+The state machine keeps track of the data from [integrations](#integrations).
+- Paulus is away
+- Temperature is 50°F
+
+The automation engine let's you change state based on current state.
+1. When Paulus is home
+2. Set thermostat to 70°F
 
 
-## Nabu Casa Inc
 
-Like many open-source projects, Home Assistant has a company backing [Nabu Casa](https://www.nabucasa.com/) Inc. Founded by Paulus Schoutsen in 2018, it currently provides affordable, secure and convenient cloud access to Home Assistant instances as well as access to Google and Amazon cloud services. With this funding Nabu Casa invests back into Home Assistant with it's team of paid developers.
+## Nabu Casa
+
+Like many open-source projects, Home Assistant has a company backing [Nabu Casa](https://www.nabucasa.com/) Inc. Founded by Paulus Schoutsen in 2018, it currently provides affordable ($65/yr.), secure and convenient cloud access to Home Assistant instances as well as access to Google and Amazon cloud services. With this funding Nabu Casa invests back into Home Assistant with it's team of paid developers.
 
 
 
-## Hardware 
+## Natively Supported Hardware 
 
-### Natively Supported
-
-  #### Raspberry Pi 4 B
+  ### Raspberry Pi 4 B / Raspberry Pi 4 Computes Module
 
   **Price:** *$75*~
 
-  <!-- ![Home Assistant Yellow](/home-assistant-yellow.jpg) -->
+  Sufficient for most use cases. Extra components recommended for stable use.
 
   <img src="Pi4b.jpg" alt="Home Assistant Yellow" style="width:25%;"/>
 
-  #### Home Assistant Yellow
+  ### Home Assistant Yellow
 
   [Nabu Casa](#nabu-casa)'s flagship embeded device for running Home Assistant. Featuring a Raspberry Pi 4 compute module and a host of  peripherals.
 
-  Released in October 2021 in a [crownfunding campaign](https://www.crowdsupply.com/nabu-casa/home-assistant-yellow#products) to a success of over 300% funding.
-
-
+  Released in October 2021 in a [crowdfunding campaign](https://www.crowdsupply.com/nabu-casa/home-assistant-yellow#products) to a success of over 300% funding.
 
   **Price:** *$115-$175*
-
-  <!-- ![Home Assistant Yellow](/home-assistant-yellow.jpg) -->
 
   <img src="home-assistant-yellow.jpg" alt="Home Assistant Yellow" style="width:25%;"/>
 
 
-  #### Intel Nuc 10
+  ### Intel Nuc 10
 
   **Price:** *$300-1000*~
 
@@ -100,8 +131,6 @@ Like many open-source projects, Home Assistant has a company backing [Nabu Casa]
 
   <img src="intel-nuc-10.jpg" alt="Home Assistant Yellow" style="width:25%;"/>
 
-  #### Odroid
 
-  *(work in progress)*
 
-  #
+  ### *[more information on installation methods ](https://www.home-assistant.io/installation/)*
